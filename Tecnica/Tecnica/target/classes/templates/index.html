@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <title>Collatz Sequence</title>
+    <body>
+        <h1>Collatz Sequence</h1>
+        <form action="#" th:action="@{/api/sequence/collatz/}" method="put">
+            <label for="input">Enter a number:</label>
+            <input type="text" id="input" name="input" />
+            <button type="submit">Submit</button>
+        </form>
+        <div th:if="${sequence}">
+            <p>Input: <span th:text="${input}"></span></p>
+            <p>Sequence: <span th:text="${sequence}"></span></p>
+        </div>
+    </body>
+</html>
